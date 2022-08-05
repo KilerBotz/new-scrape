@@ -1,30 +1,30 @@
 # Note
 ID</br>
-Jika Ada Bug, Silahkan Buat [Issues](https://github.com/KilerBotz/scraper/issues/new)
+Jika Ada Bug, Silahkan Buat [Issues](https://github.com/KilerBotz/new-scrape/issues/new)
 
 EN</br>
-If there are bugs, please create [Issues](https://github.com/KilerBotz/scraper/issues/new)
+If there are bugs, please create [Issues](https://github.com/KilerBotz/new-scrape/issues/new)
 
 
 # Installation
 
 ## Latest
-`npm i github:KilerBotz/scraper`
+`npm i github:KilerBotz/new-scrape`
 
 ## Npm 
-`npm i scraper`
+`npm i new-scrape`
 
 
 # Require
 ```js
-const kiler = require("scraper")
+const kiler = require("new-scrape")
 ```
 
 # Docs
 
 ## Example
 ```js
-const kiler = require('scraper');
+const kiler = require('new-scrape');
 const judul = 'bot'
 
 kiler.pinterest(judul)
@@ -34,7 +34,7 @@ kiler.pinterest(judul)
 ```
 # OR
 ```js
-const kiler = require('scraper');
+const kiler = require('new-scrape');
 const judul = 'bot'
 
 kiler.linkwa(judul)
