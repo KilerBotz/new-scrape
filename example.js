@@ -1,4 +1,4 @@
-const kiler = require('pinterest-scrape');
+const kiler = require('new-scrape');
 const judul = 'bot'
 
 kiler.pinterest(judul)
@@ -6,3 +6,10 @@ kiler.pinterest(judul)
      console.log(result)
 });
 
+/*const kiler = require('new-scrape');
+const judul = 'bot'
+
+kiler.linkwa(judul)
+    .then(result => {
+     console.log(result)
+});*/
