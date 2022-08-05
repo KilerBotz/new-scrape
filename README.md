@@ -1,33 +1,43 @@
 # Note
 ID</br>
-Jika Ada Bug, Silahkan Buat [Issues](https://github.com/KilerBotz/pinterest-scrape/issues/new)
+Jika Ada Bug, Silahkan Buat [Issues](https://github.com/KilerBotz/scraper/issues/new)
 
 EN</br>
-If there are bugs, please create [Issues](https://github.com/KilerBotz/pinterest-scrape/issues/new)
+If there are bugs, please create [Issues](https://github.com/KilerBotz/scraper/issues/new)
 
 
 # Installation
 
 ## Latest
-`npm i github:KilerBotz/pinterest-scrape`
+`npm i github:KilerBotz/scraper`
 
 ## Npm 
-`npm i pinterest-scrape`
+`npm i scraper`
 
 
 # Require
 ```js
-const kiler = require("pinterest-scrape")
+const kiler = require("scraper")
 ```
 
 # Docs
 
 ## Example
 ```js
-const kiler = require('pinterest-scrape');
+const kiler = require('scraper');
 const judul = 'bot'
 
 kiler.pinterest(judul)
+    .then(result => {
+     console.log(result)
+});
+```
+# OR
+```js
+const kiler = require('scraper');
+const judul = 'bot'
+
+kiler.linkwa(judul)
     .then(result => {
      console.log(result)
 });
