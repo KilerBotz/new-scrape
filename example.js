@@ -6,8 +6,7 @@ kiler.pinterest(judul)
      console.log(result)
 });
 
-/*const kiler = require('new-scrape');
-const judul = 'bot'
+/*const judul = 'bot'
 
 kiler.linkwa(judul)
     .then(result => {
