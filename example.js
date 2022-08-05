@@ -5,3 +5,4 @@ kiler.pinterest(judul)
     .then(result => {
      console.log(result)
 });
+
