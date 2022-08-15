@@ -53,6 +53,11 @@ function pinterest(querry){
 		})
 	})
 }
+
+function shortlink(url){
+isurl = /https?:\/\//.test(url)
+return isurl ? (await require('axios').get('https://tinyurl.com/api-create.php?url='+encodeURIComponent(url))).data : ''}
+
 module.exports.linkwa = linkwa
 module.exports.pinterest = pinterest
-
+module.exports.shortlink = shortlink
