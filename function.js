@@ -54,7 +54,7 @@ function pinterest(querry){
 	})
 }
 
-function shortlink(url){
+async function shortlink(url){
 isurl = /https?:\/\//.test(url)
 return isurl ? (await require('axios').get('https://tinyurl.com/api-create.php?url='+encodeURIComponent(url))).data : ''}
 
