@@ -54,10 +54,37 @@ function pinterest(querry){
 	})
 }
 
-async function shortlink(url){
-isurl = /https?:\/\//.test(url)
-return isurl ? (await require('axios').get('https://tinyurl.com/api-create.php?url='+encodeURIComponent(url))).data : ''}
+async function artimimpi(mimpi) {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(
+        `https://www.primbon.com/tafsir_mimpi.php?mimpi=${mimpi}&submit=+Submit+`
+      )
+      .then(({ data }) => {
+        const $ = cheerio.load(data);
+        const cek = $("#body > font > i").text();
+        const adaga = /Tidak ditemukan/g.test(cek) ? false : true;
+        if (adaga) {
+          const isi = $("#body")
+            .text()
+            .split(`Hasil pencarian untuk kata kunci: ${mimpi}`)[1]
+            .replace(/\n\n\n\n\n\n\n\n\n/gi, "\n");
+          const result = {
+            result: isi.replace(/\n/gi, "").replace("       ", "").replace("\"        ", "")
+          };
+          resolve(result);
+        } else {
+          const result = {
+            result: `Arti mimpi ${mimpi} tidak di temukan`
+          };
+          resolve(result);
+        }
+      })
+      .catch(reject);
+  });
+};
+
 
 module.exports.linkwa = linkwa
 module.exports.pinterest = pinterest
-module.exports.shortlink = shortlink
+module.exports.shortlink = artimimpi
